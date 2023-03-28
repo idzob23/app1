@@ -1,0 +1,27 @@
+# Decoupling functions...In bonus12.py function convert do many things
+# Function should do one thing and doing it very well
+
+feet_inches = input("Enter feet and inches: ")
+
+
+def parse(feet_inches):
+    parts = feet_inches.split(' ')
+    feet = float(parts[0])
+    inches = float(parts[1])
+    return feet, inches  # return tuple, but you can return dictionary if you want: return {"feet":feet, "inches":inches)
+
+
+def convert(feet, inches):
+    meters = feet * 0.3048 + inches * 0.0254
+    print(f"{feet} feet and {inches} inches is equal to {meters} meters.")
+    return meters
+
+
+parsed = parse(feet_inches)
+
+converted = convert(parsed[0], parsed[1])
+
+if converted < 1:
+    print("Kid is to small.")
+else:
+    print("Kid can use the slide")
