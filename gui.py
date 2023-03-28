@@ -7,7 +7,7 @@ add_button  = sg.Button("Add")
 
 # Each row in a window must be a widget list...Cannot put anything you want!!!
 window = sg.Window('My To-Do App', layout=[[label], [input_text, add_button]])   #putting object in [] alone will display object on separate lines
+
 window.read()       #display windows
 print("Hello")
-
 window.close()      #close the windows when press some button
