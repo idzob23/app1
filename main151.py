@@ -1,5 +1,7 @@
 # ADD CURRENT TIME AND DATE AT THE BEGINNING OF THE SCRIPT
 
+print("GIIIIIIT-HUBBBBBB")
+
 import functions
 from datetime import datetime
 DAY = datetime.now().strftime("%d")
